@@ -20,7 +20,7 @@ export default new Router({
       // this generates a separate chunk (login.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
       component: () =>
-        import(/* webpackChunkName: "login" */ './views/Login.vue'),
+        import(/* webpackChunkName: "login" */ '@/views/Login.vue'),
     },
     {
       path: '/register',
@@ -29,7 +29,7 @@ export default new Router({
       // this generates a separate chunk (register.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
       component: () =>
-        import(/* webpackChunkName: "register" */ './views/Register.vue'),
+        import(/* webpackChunkName: "register" */ '@/views/Register.vue'),
     },
     {
       path: '/settings',
@@ -38,7 +38,7 @@ export default new Router({
       // this generates a separate chunk (settings.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
       component: () =>
-        import(/* webpackChunkName: "settings" */ './views/Settings.vue'),
+        import(/* webpackChunkName: "settings" */ '@/views/Settings.vue'),
     },
     // {
     //   path: "/login",
@@ -47,7 +47,7 @@ export default new Router({
     //   // this generates a separate chunk (login.[hash].js) for this route
     //   // which is lazy-loaded when the route is visited.
     //   component: () =>
-    //     import(/* webpackChunkName: "login" */ "./views/Login.vue")
+    //     import(/* webpackChunkName: "login" */ "@/views/Login.vue")
     // }
   ],
 });
