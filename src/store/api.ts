@@ -1,7 +1,8 @@
 import axios from 'axios';
-
+import { UserSubmit, UserResponse } from './models';
+//tslint:disable
 export const conduitApi = axios.create({
-  baseURL: 'https://conduit.productionready.io/api',
+  baseURL: "https://conduit.productionready.io/api"
   // timeout: 1000,
   // headers: { "X-Custom-Header": "foobar" }
 });
@@ -12,4 +13,15 @@ export function setJWT(jwt: string) {
 
 export function clearJWT() {
   delete conduitApi.defaults.headers.common.Authorization;
+}
+
+export async function loginUser(
+  user: UserSubmit
+): Promise<UserResponse | undefined> {
+  try {
+    const response = await axios.post("/users/login", { user });
+    return response.data as UserResponse;
+  } catch (e) {
+    console.log("login user error is: ", e);
+  }
 }

@@ -11,6 +11,10 @@ export interface UserSubmit {
   password: string;
 }
 
+export interface UserResponse {
+  user: User;
+}
+
 export interface Profile {
   username: string;
   bio?: string;
