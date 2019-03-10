@@ -17,7 +17,7 @@ export function clearJWT() {
 
 export async function loginUser(user: UserSubmit): Promise<User | undefined> {
   try {
-    const response = await axios.post("/users/login", { user });
+    const response = await conduitApi.post("/users/login", { user });
     return (response.data as UserResponse).user;
   } catch (e) {
     console.log("login user error is: ", e);
