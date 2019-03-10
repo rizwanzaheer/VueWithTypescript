@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { UserSubmit, UserResponse, User } from './models';
+import { UserSubmit, UserResponse, User, ArticleResponse } from './models';
 //tslint:disable
 export const conduitApi = axios.create({
   baseURL: "https://conduit.productionready.io/api"
@@ -22,4 +22,9 @@ export async function loginUser(user: UserSubmit): Promise<User | undefined> {
   } catch (e) {
     console.log("login user error is: ", e);
   }
+}
+
+export async function getGlobalFeed() {
+  const resposne = await conduitApi.get("/articles");
+  return resposne.data as ArticleResponse;
 }

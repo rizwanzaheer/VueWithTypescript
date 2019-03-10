@@ -5,6 +5,7 @@ import store from '@/store';
   namespaced: true,
   name: 'articles',
   store,
+  dynamic: true,
 })
 class ArticlesModules extends VuexModule {
   public user: any;
