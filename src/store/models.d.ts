@@ -24,7 +24,7 @@ export interface Profile {
 
 export interface ArticleResponse {
   articles?: Article[] | null;
-  articleCount: number;
+  articlesCount: number;
 }
 export interface Article {
   slug: string;
