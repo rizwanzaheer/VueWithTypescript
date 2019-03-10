@@ -42,7 +42,7 @@
 <script lang="ts">
 //tslint:disable
 import { Vue, Component } from "vue-property-decorator";
-import users from "@/store/moduels/user";
+import users from "@/store/modules/user";
 
 @Component
 export default class Login extends Vue {

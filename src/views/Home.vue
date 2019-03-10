@@ -51,11 +51,15 @@
 //tslint:disable
 import { Vue, Component } from "vue-property-decorator";
 import ArticlePreview from "@/components/article/ArticlePreview.vue";
+import articles from "@/store/modules/articles";
+import { Article } from "@/store/models";
 
 @Component({
   components: {
     ArticlePreview
   }
 })
-export default class Home extends Vue {}
+export default class Home extends Vue {
+  feed: Article[] = [];
+}
 </script>

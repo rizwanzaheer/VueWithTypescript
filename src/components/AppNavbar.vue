@@ -30,12 +30,12 @@
 <script lang="ts">
 //tslint:disable
 import { Vue, Component } from "vue-property-decorator";
-import users from "@/store/moduels/user";
+import users from "@/store/modules/user";
 
 @Component
 export default class AppNavbar extends Vue {
   get username() {
-    users.username;
+    return users.username;
   }
 }
 </script>
