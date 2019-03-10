@@ -12,6 +12,7 @@ import { loginUser } from '../api';
   namespaced: true,
   name: 'users',
   store,
+  dynamic: true,
 })
 class UsersModules extends VuexModule {
   public user: User | null = null;

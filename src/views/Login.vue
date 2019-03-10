@@ -42,6 +42,7 @@
 <script lang="ts">
 //tslint:disable
 import { Vue, Component } from "vue-property-decorator";
+import users from "@/store/moduels/user";
 
 @Component
 export default class Login extends Vue {
@@ -49,6 +50,10 @@ export default class Login extends Vue {
   password = "";
 
   login() {
+    users.login({
+      email: this.email,
+      password: this.password
+    });
     console.log(
       `login email is: ${this.email} & password is: ${this.password}`
     );
