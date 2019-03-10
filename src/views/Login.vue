@@ -45,10 +45,10 @@ import { Vue, Component } from "vue-property-decorator";
 
 @Component
 export default class Login extends Vue {
-  public email = "";
-  public password = "";
+  email = "";
+  password = "";
 
-  public login() {
+  login() {
     console.log(
       `login email is: ${this.email} & password is: ${this.password}`
     );
