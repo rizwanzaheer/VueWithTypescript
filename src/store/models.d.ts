@@ -23,7 +23,7 @@ export interface Profile {
 }
 
 export interface ArticleResponse {
-  article?: Article[] | null;
+  articles?: Article[] | null;
   articleCount: number;
 }
 export interface Article {
